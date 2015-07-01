@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<msv:DocumentRoot xmlns:msv="http://tns.tibco.com/bw/model/core/moduleSV">
-  <moduleSharedVariables>
-    <moduleSharedVariable name="LogLevel" type="{http://www.mycorelogic.com/CLE/Public/Log.xsd}LogLevel" initialValueMode="literal" initialValue="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;p:LogLevel xmlns:p=&quot;http://www.mycorelogic.com/CLE/Public/Log.xsd&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>DEBUG&lt;/p:LogLevel>&#xA;"/>
-  </moduleSharedVariables>
-  <import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.mycorelogic.com/CLE/Public/Log.xsd" location="../Schemas/Public/Log.xsd"/>
-</msv:DocumentRoot>
