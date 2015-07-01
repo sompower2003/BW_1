@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:tns="http://globalgateway.mycorelogic.com/wsdl/SetServiceConfiguration" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SetConfigurations" targetNamespace="http://globalgateway.mycorelogic.com/wsdl/SetServiceConfiguration">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="unqualified" targetNamespace="http://globalgateway.mycorelogic.com/wsdl/SetServiceConfiguration">
+      <xsd:element name="SetServiceConfigurationRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="xmlConfiguration" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetServiceConfigurationFault">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fault" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SetServiceConfigurationRequest">
+    <wsdl:part element="tns:SetServiceConfigurationRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="SetServiceConfigurationFault">
+    <wsdl:part element="tns:SetServiceConfigurationFault" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="ServiceConfiguration">
+    <wsdl:operation name="SetServiceConfiguration">
+      <wsdl:input message="tns:SetServiceConfigurationRequest" name="SetServiceConfigurationInput"/>
+      <wsdl:fault message="tns:SetServiceConfigurationFault" name="Fault"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,1 @@
+java -jar ../../../tools/java/jmsutil/build/libs/jmsutil-1.0-all.jar -JNDIUser clp.service -JNDIPassword clp.service -providerURL tibjmsnaming://clpqn1vdinplt01.infosolco.net:7222 -JMSUser clp.service -JMSPassword clp.service -queue clp.g2.asg.out.request -operation send -file taxssot-nms-valid.xml

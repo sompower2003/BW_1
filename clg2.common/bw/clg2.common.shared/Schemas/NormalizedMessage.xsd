@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://globalgateway.mycorelogic.com/NormalizedMessage" xmlns="http://globalgateway.mycorelogic.com/NormalizedMessage" xmlns:g2="http://globalgateway.mycorelogic.com/ServiceConfiguration" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://globalgateway.mycorelogic.com/ServiceConfiguration" schemaLocation="../../../../clg2.config/bw/clg2.configuration.shared/Schemas/ServiceConfiguration.xsd"/>
+	<xs:element name="NormalizedMessage">
+		<xs:annotation>
+			<xs:documentation>
+				The NMS (Normalized Message) is passed between
+				components
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="requestType" type="xs:string" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="requestAction" type="xs:string" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="payload" type="xs:string" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="safeStoreFilename" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="postBackURL" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="orderId" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="partnerId" type="xs:string" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="g2:serviceConfiguration" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:jms="http://xsd.tns.tibco.com/bw/models/sharedresource/jms" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_cPaYMAiQEeWKTdsSbWubjA" targetNamespace="http://tns.tibco.com/bw/composite/clg2.request.module" name="clg2.request.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_cdROAAiQEeWKTdsSbWubjA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_cda_AAiQEeWKTdsSbWubjA" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_cda_AQiQEeWKTdsSbWubjA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_cda_AgiQEeWKTdsSbWubjA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_cda_AwiQEeWKTdsSbWubjA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_cda_BAiQEeWKTdsSbWubjA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_cda_BQiQEeWKTdsSbWubjA" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_cdkI8AiQEeWKTdsSbWubjA" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_cdkI8QiQEeWKTdsSbWubjA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_S_zhcBXrEeWRvIs_b02IDA" name="jmsConnectionProperty" type="jms:JMSConnectionFactory" scaext:simpleValue="" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_7lXhYBYYEeWxpfiiwwS9vg" name="applicationName" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_M92a0A-wEeWIZ8uM8vQ9mA" name="/configurationFiles/serviceConfigFileName" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_hf4UcA-wEeWIZ8uM8vQ9mA" name="/configurationFiles/partnerConfigFileName" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_Re-WMg37EeW_zMcTsMTzjw" name="ComponentActivator" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_Re-WMw37EeW_zMcTsMTzjw" processName="clg2.request.module.Activator"/>
+  </sca:component>
+  <sca:component xmi:id="_2efrMBPIEeWaZ_J1qS1l_Q" name="ComponentOrderIdentity" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_2efrMRPIEeWaZ_J1qS1l_Q" processName="clg2.request.module.OrderIdentity"/>
+  </sca:component>
+</sca:composite>

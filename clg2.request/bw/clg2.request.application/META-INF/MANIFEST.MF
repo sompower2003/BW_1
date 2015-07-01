@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Clg2 Request Application
+Bundle-SymbolicName: clg2.request.application
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: CoreLogic
+TIBCO-BW-Application: META-INF/TIBCO.xml
+TIBCO-BW-ConfigProfile: META-INF/Windows.substvar
+TIBCO-BW-Version: 6.2.1 V18 2015-03-13

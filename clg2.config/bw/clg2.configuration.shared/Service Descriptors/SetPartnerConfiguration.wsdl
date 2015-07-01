@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:tns="http://globalgateway.mycorelogic.com/wsdl/SetPartnerConfiguration" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SetPartnerConfiguration" targetNamespace="http://globalgateway.mycorelogic.com/wsdl/SetPartnerConfiguration">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="unqualified" targetNamespace="http://globalgateway.mycorelogic.com/wsdl/SetPartnerConfiguration">
+      <xsd:element name="SetPartnerConfigurationRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="xmlConfiguration" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetPartnerConfigurationFault">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fault" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SetPartnerConfigurationRequest">
+    <wsdl:part element="tns:SetPartnerConfigurationRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="SetPartnerConfigurationFault">
+    <wsdl:part element="tns:SetPartnerConfigurationFault" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="PartnerConfiguration">
+    <wsdl:operation name="SetPartnerConfiguration">
+      <wsdl:input message="tns:SetPartnerConfigurationRequest" name="SetPartnerConfigurationInput"/>
+      <wsdl:fault message="tns:SetPartnerConfigurationFault" name="Fault"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

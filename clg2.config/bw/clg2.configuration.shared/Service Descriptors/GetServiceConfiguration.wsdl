@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:tns="http://globalgateway.mycorelogic.com/wsdl/GetServiceConfiguration" 
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+                  name="GetServiceConfiguration" targetNamespace="http://globalgateway.mycorelogic.com/wsdl/GetServiceConfiguration">
+  <wsdl:types>
+    <xsd:schema xmlns:Q2="http://globalgateway.mycorelogic.com/ServiceConfiguration" elementFormDefault="unqualified" 
+    targetNamespace="http://globalgateway.mycorelogic.com/wsdl/GetServiceConfiguration">
+            <xsd:import namespace="http://globalgateway.mycorelogic.com/ServiceConfiguration" schemaLocation="../Schemas/ServiceConfiguration.xsd"/>
+      <xsd:element name="GetServiceConfigurationRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+ 	        <xsd:element name="ServiceType" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetServiceConfigurationResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+                        <xsd:element minOccurs="0" ref="Q2:serviceConfiguration"/>
+                    </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetServiceConfigurationFault">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fault" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetServiceConfigurationRequest">
+    <wsdl:part element="tns:GetServiceConfigurationRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetServiceConfigurationResponse">
+    <wsdl:part element="tns:GetServiceConfigurationResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetServiceConfigurationFault">
+    <wsdl:part element="tns:GetServiceConfigurationFault" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="ServiceConfiguration">
+    <wsdl:operation name="GetServiceConfiguration">
+      <wsdl:input message="tns:GetServiceConfigurationRequest" name="GetServiceConfigurationInput"/>
+      <wsdl:output message="tns:GetServiceConfigurationResponse" name="GetServiceConfigurationOutput"/>
+      <wsdl:fault message="tns:GetServiceConfigurationFault" name="Fault"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

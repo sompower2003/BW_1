@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:partnerConfiguration xmlns:p="http://globalgateway.mycorelogic.com/PartnerConfiguration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://globalgateway.mycorelogic.com/PartnerConfiguration ../Schemas/PartnerConfiguration.xsd ">
+  <p:partner name="WF"/>
+</p:partnerConfiguration>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:tns="http://globalgateway.mycorelogic.com/wsdl/GetPartnerConfiguration" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="GetPartnerConfiguration" targetNamespace="http://globalgateway.mycorelogic.com/wsdl/GetPartnerConfiguration">
+  <wsdl:types>
+    <xsd:schema xmlns:Q="http://globalgatewaymy.corelogic.com/PartnerConfiguration" xmlns:Q2="http://globalgateway.mycorelogic.com/PartnerConfiguration" elementFormDefault="unqualified" targetNamespace="http://globalgateway.mycorelogic.com/wsdl/GetPartnerConfiguration">
+            <xsd:import namespace="http://globalgateway.mycorelogic.com/PartnerConfiguration" schemaLocation="../Schemas/PartnerConfiguration.xsd"/>
+      <xsd:element name="GetPartnerConfigurationRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="PartnerId" type="xsd:string"/>
+             <xsd:element name="ServiceType" type="xsd:string"/>
+         </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetPartnerConfigurationResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+               <xsd:element minOccurs="0" ref="Q2:partnerConfiguration"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetPartnerConfigurationFault">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fault" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPartnerConfigurationRequest">
+    <wsdl:part element="tns:GetPartnerConfigurationRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetPartnerConfigurationResponse">
+    <wsdl:part element="tns:GetPartnerConfigurationResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetPartnerConfigurationFault">
+    <wsdl:part element="tns:GetPartnerConfigurationFault" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="PartnerConfiguration">
+    <wsdl:operation name="GetPartnerConfiguration">
+      <wsdl:input message="tns:GetPartnerConfigurationRequest" name="GetPartnerConfigurationInput"/>
+      <wsdl:output message="tns:GetPartnerConfigurationResponse" name="GetPartnerConfigurationOutput"/>
+      <wsdl:fault message="tns:GetPartnerConfigurationFault" name="Fault"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

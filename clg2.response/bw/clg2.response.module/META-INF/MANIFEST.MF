@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Clg2 Response Module
+Bundle-SymbolicName: clg2.response.module
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: CoreLogic
+TIBCO-BW-Version: 6.2.1 V18 2015-03-13
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
+TIBCO-BW-JobSharedVariables: META-INF/module.jsv
+TIBCO-BW-ApplicationModule: META-INF/module.bwm
+Require-Capability: com.tibco.bw.model; filter:="(name=bwext)"
